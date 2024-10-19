@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Числа от 100 до 200, кратные трем:");
+        
+        for (int i = 100; i <= 200; i++) {
+            if (i % 3 == 0) { 
+                System.out.println(i); 
+            }
+        }
+    }
+}
