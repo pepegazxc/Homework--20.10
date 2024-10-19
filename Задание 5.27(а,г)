@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //5.27(a)
+        int sum = 0;
+
+        for (int i = 100; i <= 500; i++) {
+            sum += i;
+        }
+        System.out.println("Сумма всех чисел от 100 до 500: " + sum);
+
+        //5.27(г)
+        int bul = 0;
+
+        System.out.println("Введите значения а и b (b>=a):  ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        for (int c = a; c <= b; c++) {
+            bul += c;
+        }
+        System.out.println("Сумма всех значений = "+ bul);
+
+        
+    }
+}
+
