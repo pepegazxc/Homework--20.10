@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Введите значение n (n > 1): ");
+        int n = sc.nextInt();
+        if (n <= 1) {
+            System.out.println("n должно быть больше 1.");
+            return;
+        }
+        int a = 1, b = 1;
+        while (b <= n) {
+            int temp = a + b;
+            a = b;
+            b = temp;
+        }
+        System.out.println("Первое число Фибоначчи больше " + n + " равно " + b);
+
+        int sum = 0;
+        a = 1;
+        b = 1;
+        
+        if (a <= 1000) {
+            sum += a;
+        }
+        if (b <= 1000) {
+            sum += b;
+        }
+        while (true) {
+            int next = a + b;
+            if (next > 1000) {
+                break;
+            }
+            sum += next; 
+            a = b; 
+            b = next; 
+        }
+        System.out.println("Сумма чисел Фибначи не превосходящих 1000 равна " + sum);
+    }
+}
