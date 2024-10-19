@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //5.28(a)
+        long product = 1;
+
+
+        for (int i = 8; i <= 15; i++) {
+            product *= i;
+        }
+
+
+        System.out.println("Произведение всех целых чисел от 8 до 15: " + product);
+
+
+        //5.28(г)
+        System.out.print("Введите значение a: ");
+        int a = sc.nextInt();
+        System.out.print("Введите значение b: ");
+        int b = sc.nextInt();
+
+        if (b <= a) {
+            System.out.println("Ошибка: значение b должно быть больше значения a.");
+            return;
+        }
+
+        long product1 = 1;
+
+
+        for (int i = a; i <= b; i++) {
+            product1 *= i;
+        }
+
+        System.out.println("Произведение всех целых чисел от " + a + " до " + b + ": " + product1);
+    }
+}
